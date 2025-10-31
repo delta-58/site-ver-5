@@ -1,0 +1,169 @@
+/* Placeholder styling for select controls */
+select option[disabled][selected] {
+    color: #9ca3af;
+}
+.dark select option[disabled][selected] {
+    color: #6b7280;
+}
+select option:not([disabled]) {
+    color: #fcd34d;
+}
+.dark select option:not([disabled]) {
+    color: #fde68a;
+}
+select:invalid {
+    color: #9ca3af;
+}
+.dark select:invalid {
+    color: #6b7280;
+}
+
+:root {
+    --header-offset: 112px;
+}
+
+html,
+body {
+    scroll-padding-top: var(--header-offset);
+}
+
+.section-anchor {
+    scroll-margin-top: var(--header-offset);
+}
+
+body {
+    position: relative;
+    background-color: #1A2F1A !important;
+}
+
+.dark body {
+    background-color: #1A2F1A !important;
+}
+
+.hero-banner,
+.about-banner,
+.advantage-image,
+.vacancies-highlight {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%), url("photos/2025-10-09_16h08_22.webp");
+}
+
+.about-banner-primary {
+    background-image: url("photos/WhatsApp Image 2025-10-10 at 12.33.12.webp");
+}
+
+.about-banner-secondary {
+    background-image: url("photos/2025-10-09_16h09_10.webp");
+}
+
+@media (max-width: 640px) {
+    .about-banner-secondary {
+        background-image: url("photos/2025-10-09_16h09_10-mobile.webp") !important;
+    }
+    .vacancies-highlight {
+        background-image: url('photos/IMG_20251021_142456_955~3.webp') !important;
+    }
+}
+
+.about-banner-tertiary {
+    background-image: url("photos/там де текст з 24 лютого 2022.webp");
+}
+
+.advantage-image-one {
+    background-image: url("photos/2025-10-09_16h11_12.webp");
+}
+
+.advantage-image-two {
+    background-image: url("photos/тривале якісне навчання.webp");
+}
+
+.advantage-image-three {
+    background-image: url("photos/сучасна зброя та спорядження.webp");
+}
+
+.advantage-image-four {
+    background-image: url("photos/дружній колектив.webp");
+}
+
+.advantage-image-five {
+    background-image: url("photos/Гідне грошове забезпечення.webp");
+}
+
+.advantage-image-six {
+    background-image: url("photos/служба в компанії цікавих людей 2.JPG");
+}
+
+.vacancies-highlight {
+    background-image: url('photos/2025-10-09_16h11_39.webp');
+}
+
+#video-carousel {
+    width: 133.333%;
+}
+
+@media (max-width: 767px) {
+    .relative.overflow-hidden:has(#video-carousel) {
+        overflow-x: auto;
+        overflow-y: hidden;
+        scroll-snap-type: x mandatory;
+    }
+    #video-carousel {
+        width: auto;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+    #video-carousel > div {
+        scroll-snap-align: start;
+        flex-shrink: 0;
+        width: 100vw; /* Full viewport width for mobile */
+    }
+}
+
+@media (max-width: 767px) {
+    /* Contacts section tweaks for narrow screens */
+    .contact-card {
+        padding: 1.75rem;
+        margin-inline: auto;
+        max-width: min(92vw, 420px);
+    }
+    .contact-emblem {
+        display: none;
+    }
+    .contact-socials {
+        padding: 1.75rem;
+    }
+    .apply-container {
+        max-width: min(92vw, 420px);
+    }
+    .apply-card {
+        margin-inline: auto;
+        max-width: min(92vw, 420px);
+    }
+    .contact-social-links {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.1rem;
+        justify-items: center;
+    }
+    .contact-social-links > a {
+        justify-content: center;
+        text-align: center;
+    }
+    .contact-social-icon {
+        width: 3.5rem !important;
+        height: 3.5rem !important;
+    }
+    .contact-social-icon svg {
+        width: 1.9rem;
+        height: 1.9rem;
+    }
+    .contact-social-links span {
+        margin-top: 0.6rem;
+        font-size: 0.8rem;
+    }
+}
