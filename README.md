@@ -55,7 +55,7 @@ npm run preview
 ├── index.html          # Головна HTML сторінка
 ├── script.js           # JavaScript функціонал
 ├── styles.css          # CSS стилі
-├── photos/             # Зображення та медіа
+├── images/             # Зображення та медіа
 ├── .env               # Змінні оточення (не в git)
 ├── .env.example       # Приклад змінних оточення
 ├── vite.config.js     # Конфігурація Vite

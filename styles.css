@@ -50,56 +50,63 @@ body {
 }
 
 .hero-banner {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%), url("photos/2025-10-09_16h08_22.webp");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%), url("images/2025-10-09_16h08_22.webp");
 }
 
 .about-banner-primary {
-    background-image: url("photos/WhatsApp Image 2025-10-10 at 12.33.12.webp");
+    background-image: url("images/WhatsApp Image 2025-10-10 at 12.33.12.webp");
 }
 
 .about-banner-secondary {
-    background-image: url("photos/2025-10-09_16h09_10.webp");
+    background-image: url("images/2025-10-09_16h09_10.webp");
 }
 
 @media (max-width: 640px) {
     .about-banner-secondary {
-        background-image: url("photos/2025-10-09_16h09_10-mobile.webp") !important;
+        background-image: url("images/2025-10-09_16h09_10-mobile.webp") !important;
     }
     .vacancies-highlight {
-        background-image: url('photos/IMG_20251021_142456_955~3.webp') !important;
+        background-image: url('images/IMG_20251021_142456_955~3.webp') !important;
+    }
+    .vacancies-button {
+        height: 3rem;
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 0.875rem;
+        line-height: 1.2;
     }
 }
 
 .about-banner-tertiary {
-    background-image: url("photos/там де текст з 24 лютого 2022.webp");
+    background-image: url("images/там де текст з 24 лютого 2022.webp");
 }
 
 .advantage-image-one {
-    background-image: url("photos/2025-10-09_16h11_12.webp");
+    background-image: url("images/2025-10-09_16h11_12.webp");
 }
 
 .advantage-image-two {
-    background-image: url("photos/тривале якісне навчання.webp");
+    background-image: url("images/тривале якісне навчання.webp");
 }
 
 .advantage-image-three {
-    background-image: url("photos/сучасна зброя та спорядження.webp");
+    background-image: url("images/сучасна зброя та спорядження.webp");
 }
 
 .advantage-image-four {
-    background-image: url("photos/дружній колектив.webp");
+    background-image: url("images/дружній колектив.webp");
 }
 
 .advantage-image-five {
-    background-image: url("photos/Гідне грошове забезпечення.webp");
+    background-image: url("images/Гідне грошове забезпечення.webp");
 }
 
 .advantage-image-six {
-    background-image: url("photos/служба в компанії цікавих людей 2.JPG");
+    background-image: url("images/служба в компанії цікавих людей 2.webp");
 }
 
 .vacancies-highlight {
-    background-image: url('photos/2025-10-09_16h11_39.webp');
+    background-image: url('images/2025-10-09_16h11_39.webp');
 }
 
 #video-carousel {
