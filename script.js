@@ -1,16 +1,21 @@
 // ==================== КОНФІГУРАЦІЯ ====================
 
 // Змінні оточення з .env (через Vite)
-const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const env = (typeof import.meta !== 'undefined' && import.meta && import.meta.env) ? import.meta.env : {};
+const EMAILJS_PUBLIC_KEY = env.VITE_EMAILJS_PUBLIC_KEY;
+const EMAILJS_SERVICE_ID = env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = env.VITE_EMAILJS_TEMPLATE_ID;
 
 // Ініціалізація EmailJS
 (function initEmailJS() {
-    if (EMAILJS_PUBLIC_KEY && typeof emailjs !== 'undefined') {
+    if (typeof emailjs === 'undefined') {
+        return;
+    }
+
+    if (EMAILJS_PUBLIC_KEY) {
         emailjs.init(EMAILJS_PUBLIC_KEY);
     } else {
-        console.error('EmailJS Public Key не знайдено. Перевірте .env файл');
+        console.warn('EmailJS Public Key не знайдено. Перевірте .env файл');
     }
 })();
 
