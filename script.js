@@ -552,12 +552,12 @@ function initVideoCarousel() {
     if (!prevVideoBtn || !nextVideoBtn || !videoCarousel) return;
 
     const totalVideos = videoCarousel.children.length;
-    const videosPerSlide = 3;
-    const maxSlide = Math.floor(totalVideos / videosPerSlide) - 1;
+    const maxSlide = Math.max(0, totalVideos - 3);
 
     function updateCarousel() {
         if (window.innerWidth >= 768) {
-            videoCarousel.style.transform = `translateX(-${currentVideoSlide * 33.333}%)`;
+            const slidePercent = 100 / totalVideos;
+            videoCarousel.style.transform = `translateX(-${currentVideoSlide * slidePercent}%)`;
         }
     }
 
