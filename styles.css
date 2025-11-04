@@ -82,7 +82,7 @@ body {
 }
 
 .advantage-image-one {
-    background-image: url("images/2025-10-09_16h11_12.webp");
+    background-image: url("images/кращі командири.webp");
 }
 
 .advantage-image-two {
@@ -107,6 +107,14 @@ body {
 
 .vacancies-highlight {
     background-image: url('images/2025-10-09_16h11_39.webp');
+}
+
+.contact-card {
+    background-image: linear-gradient(rgba(17, 24, 39, 0.78), rgba(17, 24, 39, 0.78)), url("images/контакти.webp") !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent !important;
 }
 
 #video-carousel {
