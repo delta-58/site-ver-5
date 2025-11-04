@@ -551,6 +551,10 @@ function initVideoCarousel() {
 
     if (!prevVideoBtn || !nextVideoBtn || !videoCarousel) return;
 
+    const totalVideos = videoCarousel.children.length;
+    const videosPerSlide = 3;
+    const maxSlide = Math.floor(totalVideos / videosPerSlide) - 1;
+
     function updateCarousel() {
         if (window.innerWidth >= 768) {
             videoCarousel.style.transform = `translateX(-${currentVideoSlide * 33.333}%)`;
@@ -565,7 +569,7 @@ function initVideoCarousel() {
     });
 
     nextVideoBtn.addEventListener('click', () => {
-        if (currentVideoSlide < 1) {
+        if (currentVideoSlide < maxSlide) {
             currentVideoSlide++;
             updateCarousel();
         }
@@ -585,12 +589,12 @@ function initVideoCarousel() {
             const diffX = startX - endX;
 
             if (Math.abs(diffX) > 50) { // Minimum swipe distance
-                if (diffX > 0) { // Swipe left
-                    if (currentVideoSlide < 3) {
+                if (diffX > 0) { // Swipe left (next)
+                    if (currentVideoSlide < maxSlide) {
                         currentVideoSlide++;
                         updateCarousel();
                     }
-                } else { // Swipe right
+                } else { // Swipe right (prev)
                     if (currentVideoSlide > 0) {
                         currentVideoSlide--;
                         updateCarousel();
